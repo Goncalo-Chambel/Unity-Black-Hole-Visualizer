@@ -1,0 +1,15 @@
+Setting up the Unity Project
+
+Unity version: 2020.3.1f1
+
+1. Create new project with template 3D Sample Scene(URP)
+
+2. Delete the following: Scripts folder, ExampleAssets folder, Materials Folder, TutorialInfo Folder, Presets Folder, Assets->Readme, Scenes->SampleScene
+
+3. Create new scene (Visualizer), delete directional light, create empty gameobject (name it Post Processing) and add Volume script to it, create Sphere object and scale it to (5,5,5)
+
+4. Under the folder Settings, set True the "Opaque Texture" field in the files UniversalRP-LowQuality.asset, UniversalRP-MediumQuality.asset and UniversalRP-HighQuality.asset.
+
+5. Open"Window->Rendering->Lighthing". Under Scene" create a new Lighthing Settings and turn off Baked Global Illumination.
+
+6. Create a Materials and a Shaders Folder. Under Shaders, create a new Unlit Shader and name it to "Black Hole Shader". Open the shader and substitute the boiler plate code for this code (don't forget to change the shader name back). Under Materials, create a new Material and name it to "Black Hole Material". Assign the shader we just created to the material (Under "Shader->Unlit->Black Hole Shader"). Assign the material to the sphere. The sphere should turn into a black hole.
